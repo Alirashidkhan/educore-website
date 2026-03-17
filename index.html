@@ -256,6 +256,7 @@ section{padding:80px 5%;}
 .popular-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);font-size:11px;font-weight:800;padding:5px 16px;border-radius:20px;white-space:nowrap;}
 .price-plan{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,0.5);margin-bottom:12px;}
 .pricing-value-bar{display:flex;align-items:center;justify-content:center;gap:24px;background:rgba(255,255,255,0.05);border:1.5px solid rgba(255,255,255,0.13);border-radius:12px;padding:14px 28px;margin-bottom:40px;flex-wrap:wrap;}
+@media(max-width:600px){.pricing-value-bar{flex-direction:column;gap:10px;padding:14px 16px;text-align:center;}.pvb-divider{display:none;}.pvb-item{justify-content:center;}}
 .pvb-item{display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.8);}
 .pvb-item strong{color:#fff;}
 .pvb-divider{width:1px;height:28px;background:rgba(255,255,255,0.15);}
@@ -368,8 +369,9 @@ footer{background:var(--navy2);padding:64px 5% 32px;border-top:1px solid rgba(25
   .hero-trust{gap:12px;padding-top:16px;margin-top:16px;}
   .modules-grid{grid-template-columns:1fr;}
   .builtfor-grid{grid-template-columns:1fr;}
-  .mapp-phones{flex-direction:column;gap:0;justify-content:center;}
-  .mapp-phone{width:150px;margin-bottom:0!important;}
+  .mapp-phones{flex-direction:column;gap:16px;justify-content:center;align-items:center;}
+  .mapp-phone{width:160px;margin-bottom:0!important;}
+  .mapp-phone-2{margin-bottom:0!important;}
   .sec-grid{grid-template-columns:1fr;}
   .testi-grid{grid-template-columns:1fr;}
   section{padding:50px 4%;}
@@ -629,8 +631,8 @@ footer{background:var(--navy2);padding:64px 5% 32px;border-top:1px solid rgba(25
   .mapp-feat span{font-size:11px;}
   .mapp-phones{gap:0;}
   .mapp-phone{width:120px;}
-  .mapp-phone:first-child{margin-right:-20px;z-index:2;}
-  .mapp-phone:last-child{margin-left:-20px;z-index:1;}
+  .mapp-phone:first-child{margin-right:0;z-index:2;}
+  .mapp-phone:last-child{margin-left:0;z-index:1;}
   .phone-notch{width:50px;height:8px;margin-bottom:8px;}
   .phone-screen{min-height:180px;padding:8px 6px;border-radius:12px;}
   .ps-header span{font-size:9px;}
@@ -691,11 +693,11 @@ footer{background:var(--navy2);padding:64px 5% 32px;border-top:1px solid rgba(25
 .announce-badge{background:var(--navy);color:var(--gold);font-size:11px;font-weight:800;padding:2px 8px;border-radius:10px;text-transform:uppercase;letter-spacing:.5px;}
 
 /* ── ENQUIRY POPUP ── */
-.eq-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:10000;align-items:center;justify-content:center;padding:16px;}
+.eq-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:10000;align-items:flex-start;justify-content:center;padding:20px 16px;overflow-y:auto;-webkit-overflow-scrolling:touch;}
 .eq-overlay.open{display:flex;}
 .eq-modal{background:#fff;border-radius:20px;width:100%;max-width:860px;display:grid;grid-template-columns:1fr 1fr;overflow-y:auto;max-height:85vh;box-shadow:0 32px 80px rgba(0,0,0,0.4);position:relative;}
 @media(max-width:900px){.eq-modal{max-width:90%;max-height:80vh;}}
-@media(max-width:680px){.eq-modal{grid-template-columns:1fr;max-width:95%;max-height:80vh;}}
+@media(max-width:680px){.eq-modal{grid-template-columns:1fr;max-width:96%;max-height:none;}.eq-left{display:none;}.eq-right{border-radius:16px;}}
 @media(max-width:600px){.eq-modal{grid-template-columns:1fr;max-width:96%;max-height:75vh;}}
 @media(max-width:480px){.eq-modal{grid-template-columns:1fr;max-width:98%;max-height:70vh;border-radius:16px;}}
 @media(max-width:375px){.eq-modal{grid-template-columns:1fr;max-width:99%;max-height:65vh;border-radius:14px;}}
@@ -941,6 +943,7 @@ footer{background:var(--navy2);padding:64px 5% 32px;border-top:1px solid rgba(25
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
+  <button onclick="openEnquiry();document.getElementById('mobileMenu').classList.remove('open');" style="width:100%;background:var(--gold);color:var(--navy);border:none;padding:14px 20px;border-radius:8px;font-size:15px;font-weight:700;cursor:pointer;margin-bottom:8px;">📅 Book Free Demo</button>
   <a href="#modules" onclick="toggleMobile()">Modules</a>
   <a href="#solutions" onclick="toggleMobile()">Solutions</a>
   <a href="#showcase" onclick="toggleMobile()">Dashboards</a>
