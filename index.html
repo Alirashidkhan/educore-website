@@ -2263,7 +2263,7 @@ function openVideoModal(){
 }
 function closeVideoModal(){
   document.getElementById('videoModal').classList.remove('open');
-  document.body.style.overflow='';
+  document.body.style.overflow='auto';
 }
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeVideoModal();});
 
@@ -2313,7 +2313,7 @@ function openEnquiry(){
 }
 function closeEnquiry(){
   document.getElementById('eqOverlay').classList.remove('open');
-  document.body.style.overflow='';
+  document.body.style.overflow='auto';
   sessionStorage.setItem('eqSeen','1');
 }
 function submitEnquiry(e){
@@ -2324,7 +2324,8 @@ function submitEnquiry(e){
 }
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeEnquiry();closeVideoModal();}});
 // Show popup after 6s on first visit (session-scoped so it doesn't re-fire every page load)
-if(!sessionStorage.getItem('eqSeen')){
+// Only auto-open on desktop (viewport width > 768px) to avoid blocking mobile scrolling
+if(!sessionStorage.getItem('eqSeen') && window.innerWidth > 768){
   setTimeout(()=>{ if(!document.getElementById('videoModal').classList.contains('open')) openEnquiry(); },6000);
 }
 
