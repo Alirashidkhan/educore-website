@@ -306,7 +306,7 @@ footer{background:var(--navy2);padding:64px 5% 32px;border-top:1px solid rgba(25
 .footer-col h5{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:rgba(255,255,255,0.35);margin-bottom:16px;}
 .footer-col a{display:block;font-size:13px;color:rgba(255,255,255,0.55);text-decoration:none;margin-bottom:10px;transition:color .2s;}
 .footer-col a:hover{color:var(--gold);}
-.footer-bottom{max-width:1200px;margin:0 auto;padding-top:24px;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:gap;}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:24px;border-top:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
 .footer-copy{font-size:12px;color:rgba(255,255,255,0.3);}
 .footer-links{display:flex;gap:24px;}
 .footer-links a{font-size:12px;color:rgba(255,255,255,0.3);text-decoration:none;}
@@ -947,7 +947,7 @@ footer{background:var(--navy2);padding:64px 5% 32px;border-top:1px solid rgba(25
   <a href="#pricing" onclick="toggleMobile()">Pricing</a>
   <a href="#roi" onclick="toggleMobile()">ROI Calculator</a>
   <a href="#testimonials" onclick="toggleMobile()">Reviews</a>
-  <a href="#contact" onclick="toggleMobile()">Book a Free Demo</a>
+  <a href="#" onclick="openEnquiry();toggleMobile();return false;" style="color:var(--gold);font-weight:700;">📅 Book Free Demo</a>
 </div>
 
 <!-- HERO -->
@@ -1330,7 +1330,7 @@ footer{background:var(--navy2);padding:64px 5% 32px;border-top:1px solid rgba(25
             <div><strong>School Circulars &amp; Events</strong><span>Holiday notices, PTM dates and school events delivered instantly via portal and WhatsApp</span></div>
           </div>
         </div>
-        <a href="#contact" class="btn btn-gold" style="margin-top:28px;">See Parent Portal Live <i class="fa fa-arrow-right"></i></a>
+        <button onclick="openEnquiry()" class="btn btn-gold" style="margin-top:28px;border:none;cursor:pointer;">See Parent Portal Live <i class="fa fa-arrow-right"></i></button>
       </div>
       <div class="mapp-phones fade-up">
         <div class="mapp-phone mapp-phone-1">
@@ -2005,8 +2005,8 @@ footer{background:var(--navy2);padding:64px 5% 32px;border-top:1px solid rgba(25
   <h2>Ready to Transform Your <span>Institution?</span></h2>
   <p>Join 500+ schools and colleges across India already running on EduCore. Start your free 7-day trial today — no credit card required.</p>
   <div class="cta-actions">
-    <a href="#contact" class="btn btn-gold btn-cta">Start Free Trial <i class="fa fa-arrow-right"></i></a>
-    <a href="#contact" class="btn btn-ghost btn-cta">Book a Demo</a>
+    <button onclick="openEnquiry()" class="btn btn-gold btn-cta" style="border:none;cursor:pointer;">Start Free Trial <i class="fa fa-arrow-right"></i></button>
+    <button onclick="openEnquiry()" class="btn btn-ghost btn-cta" style="border:none;cursor:pointer;">Book a Demo</button>
   </div>
 </div>
 
@@ -2146,7 +2146,7 @@ footer{background:var(--navy2);padding:64px 5% 32px;border-top:1px solid rgba(25
   <div class="sticky-cta-inner">
     <div class="sticky-cta-text"><strong>EduCore is free for 7 days.</strong> No credit card. No setup fee. Cancel anytime.</div>
     <div class="sticky-cta-actions">
-      <a href="#contact" class="btn btn-gold btn-sm">Book Free Demo</a>
+      <button onclick="openEnquiry()" class="btn btn-gold btn-sm" style="border:none;cursor:pointer;">Book Free Demo</button>
       <button class="sticky-close" onclick="document.getElementById('stickyCta').style.display='none'" aria-label="Close">✕</button>
     </div>
   </div>
@@ -2160,7 +2160,7 @@ footer{background:var(--navy2);padding:64px 5% 32px;border-top:1px solid rgba(25
       <i class="fa fa-play-circle"></i>
       <p>EduCore — 2-Minute Product Walkthrough</p>
       <span>Our full video demo is coming soon. In the meantime, book a live demo and we'll walk you through every feature personally — for free.</span>
-      <a href="#contact" onclick="closeVideoModal()" class="btn btn-gold" style="display:inline-flex;margin-top:8px;">Book Live Demo Instead <i class="fa fa-arrow-right"></i></a>
+      <button onclick="closeVideoModal();openEnquiry();" class="btn btn-gold" style="display:inline-flex;margin-top:8px;border:none;cursor:pointer;">Book Live Demo Instead <i class="fa fa-arrow-right"></i></button>
     </div>
   </div>
 </div>
