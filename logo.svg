@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 68" width="260" height="68" role="img" aria-label="EduCore Logo">
+  <defs>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a2d7c"/>
+      <stop offset="100%" stop-color="#0a1445"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8bb2e"/>
+      <stop offset="100%" stop-color="#C9A227"/>
+    </linearGradient>
+    <linearGradient id="goldGradH" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e8bb2e"/>
+      <stop offset="100%" stop-color="#C9A227"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Badge background with subtle shadow -->
+  <rect x="2" y="6" width="58" height="58" rx="15" fill="rgba(0,0,0,0.15)"/>
+  <rect x="0" y="4" width="58" height="58" rx="15" fill="url(#badgeGrad)"/>
+
+  <!-- Stylised E mark -->
+  <!-- Vertical backbone -->
+  <rect x="13" y="18" width="8" height="36" rx="4" fill="url(#goldGrad)"/>
+  <!-- Top arm -->
+  <rect x="13" y="18" width="33" height="10" rx="5" fill="url(#goldGradH)"/>
+  <!-- Middle arm (shorter — classic E proportion) -->
+  <rect x="13" y="31" width="25" height="10" rx="5" fill="url(#goldGradH)"/>
+  <!-- Bottom arm -->
+  <rect x="13" y="44" width="33" height="10" rx="5" fill="url(#goldGradH)"/>
+
+  <!-- Small dot accent top-right of badge (premium feel) -->
+  <circle cx="50" cy="12" r="3" fill="rgba(201,162,39,0.5)"/>
+
+  <!-- Wordmark -->
+  <!-- "Edu" in dark navy -->
+  <text x="74" y="47" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="30" font-weight="800" letter-spacing="-0.8" fill="#0d1b5e">Edu</text>
+  <!-- "Core" in gold -->
+  <text x="134" y="47" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="30" font-weight="800" letter-spacing="-0.8" fill="#C9A227">Core</text>
+
+  <!-- Tagline -->
+  <text x="75" y="61" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="9.5" font-weight="500" letter-spacing="2" fill="#6b7280" text-transform="uppercase">INSTITUTION ERP</text>
+</svg>
